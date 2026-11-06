@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------
+[Master Stylesheet - Tonu Creative Portfolio (Dark & Light Unified)]
+-------------------------------------------------------------------*/
+
+// Global Google & Local Fonts
+@import "fonts";
+
+// Dark Theme Styles
+.dark-theme,
+[data-theme="dark"] {
+  @import "dark/style";
+}
+
+// Light Theme Styles
+.light-theme,
+[data-theme="light"] {
+  @import "light/style";
+}
+
+// Theme Floating Switcher & Animations
+@import "switcher";

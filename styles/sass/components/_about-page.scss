@@ -1,0 +1,690 @@
+/*--------------------------------------------------------------
+  About Page Styles - Matches Tonu Template Theme
+--------------------------------------------------------------*/
+
+.about-page-hero,
+.about-page-story,
+.about-page-approach,
+.about-page-experience {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    background: $body-bg-color;
+    border-bottom: 1px solid $border-color;
+
+    /* Enforce sharp corners across all about page elements */
+    * {
+        border-radius: 0px !important;
+    }
+}
+
+/* ==============================================================
+   1. About Hero Section (Image 1)
+   ============================================================== */
+.about-page-hero {
+    padding: 150px 0 100px;
+
+    @include media-query(1199px) {
+        padding: 130px 0 80px;
+    }
+
+    @include media-query(767px) {
+        padding: 110px 0 60px;
+    }
+
+    .about-hero-content {
+        position: relative;
+        z-index: 2;
+        padding-right: 20px;
+
+        @include media-query(991px) {
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+
+        .about-hero-title {
+            font-family: $heading-font;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            margin: 0 0 20px;
+
+            @include media-query(1199px) {
+                font-size: 46px;
+            }
+
+            @include media-query(767px) {
+                font-size: 36px;
+                line-height: 1.25;
+            }
+
+            @include media-query(480px) {
+                font-size: 30px;
+            }
+        }
+
+        .gradient-accent-line {
+            width: 70px;
+            height: 4px;
+            background: $theme-primary-color;
+            margin-bottom: 28px;
+            display: block;
+        }
+
+        .about-hero-intro {
+            font-family: $heading-font;
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 18px;
+            color: $body-color;
+
+            @include media-query(767px) {
+                font-size: 18px;
+            }
+        }
+
+        .about-hero-text {
+            font-family: $base-font;
+            font-size: 17px;
+            line-height: 1.75;
+            color: $body-color;
+            margin-bottom: 18px;
+            max-width: 620px;
+
+            @include media-query(767px) {
+                font-size: 15.5px;
+                line-height: 1.65;
+            }
+        }
+
+        .about-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+
+            .about-hero-btn-primary {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 14px 28px;
+                font-family: $heading-font;
+                font-size: 13.5px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                background: #000;
+                color: #fff;
+                border: 1px solid #000;
+                border-radius: 0px !important;
+                transition: all 0.3s ease;
+                text-decoration: none;
+
+                &:hover {
+                    background: $theme-primary-color;
+                    border-color: $theme-primary-color;
+                    color: #fff;
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 24px rgba($theme-primary-color, 0.25);
+                }
+            }
+
+            .about-hero-btn-outline {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 14px 28px;
+                font-family: $heading-font;
+                font-size: 13.5px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                background: transparent;
+                color: $body-color;
+                border: 1px solid $border-color;
+                border-radius: 0px !important;
+                transition: all 0.3s ease;
+                text-decoration: none;
+
+                &:hover {
+                    border-color: $theme-primary-color;
+                    color: $theme-primary-color;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+
+    // Direct hero image placement without background card
+    .about-hero-image-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 580px;
+            object-fit: contain;
+            display: block;
+        }
+
+        @include media-query(991px) {
+            margin-top: 40px;
+        }
+    }
+}
+
+/* ==============================================================
+   2. About Story Section (Image 2)
+   ============================================================== */
+.about-page-story {
+    padding: 100px 0;
+
+    @include media-query(991px) {
+        padding: 70px 0;
+    }
+
+    .story-left {
+        padding-right: 30px;
+
+        @include media-query(991px) {
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+
+        .story-header {
+            margin-bottom: 30px;
+
+            .story-tag {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: 0.01em;
+                text-transform: capitalize;
+                font-family: $heading-font;
+                color: $theme-primary-color;
+                padding-left: 15px;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 25px;
+                background: $body-bg-color;
+                z-index: 1;
+
+                @include media-query(575px) {
+                    font-size: 16px;
+                    margin-bottom: 18px;
+                }
+
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: -7px;
+                    height: 39px;
+                    width: 39px;
+                    content: "";
+                    border: 2px solid $theme-primary-color;
+                    border-radius: 0px !important;
+                    z-index: -11;
+
+                    @include media-query(575px) {
+                        top: -4px;
+                        height: 34px;
+                        width: 34px;
+                    }
+                }
+
+                &:after {
+                    position: absolute;
+                    left: 34px;
+                    top: 3px;
+                    height: 20px;
+                    width: 20px;
+                    content: "";
+                    background: $body-bg-color;
+                    border-radius: 0px !important;
+                    z-index: -1;
+
+                    @include media-query(575px) {
+                        left: 29px;
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+
+            h2 {
+                font-family: $heading-font;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1.15;
+                letter-spacing: -0.01em;
+
+                @include media-query(1199px) {
+                    font-size: 40px;
+                }
+
+                @include media-query(767px) {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        .story-image-wrap {
+            position: relative;
+            background: transparent;
+            border: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+                width: 100%;
+                max-width: 440px;
+                height: auto;
+                object-fit: contain;
+                display: block;
+            }
+        }
+    }
+
+    .story-right {
+        p {
+            font-family: $base-font;
+            font-size: 16.5px;
+            line-height: 1.8;
+            color: $body-color;
+            margin-bottom: 22px;
+
+            @include media-query(767px) {
+                font-size: 15px;
+                line-height: 1.7;
+                margin-bottom: 18px;
+            }
+
+            &.lead-p {
+                font-size: 19px;
+                font-weight: 500;
+                line-height: 1.75;
+                color: $body-color;
+
+                @include media-query(767px) {
+                    font-size: 17px;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* ==============================================================
+   3. About Approach Section (Image 3)
+   ============================================================== */
+.about-page-approach {
+    padding: 100px 0;
+
+    @include media-query(991px) {
+        padding: 70px 0;
+    }
+
+    .approach-header {
+        margin-bottom: 60px;
+
+        @include media-query(767px) {
+            margin-bottom: 35px;
+        }
+
+        .approach-tag {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+            font-family: $heading-font;
+            color: $theme-primary-color;
+            padding-left: 15px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+            background: $body-bg-color;
+            z-index: 1;
+
+            @include media-query(575px) {
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: -7px;
+                height: 39px;
+                width: 39px;
+                content: "";
+                border: 2px solid $theme-primary-color;
+                border-radius: 0px !important;
+                z-index: -11;
+
+                @include media-query(575px) {
+                    top: -4px;
+                    height: 34px;
+                    width: 34px;
+                }
+            }
+
+            &:after {
+                position: absolute;
+                left: 34px;
+                top: 3px;
+                height: 20px;
+                width: 20px;
+                content: "";
+                background: $body-bg-color;
+                border-radius: 0px !important;
+                z-index: -1;
+
+                @include media-query(575px) {
+                    left: 29px;
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+
+        .approach-title {
+            font-family: $heading-font;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+
+            @include media-query(1199px) {
+                font-size: 40px;
+            }
+
+            @include media-query(767px) {
+                font-size: 30px;
+                line-height: 1.3;
+            }
+        }
+    }
+
+    .approach-list {
+        border-top: 1px solid $border-color;
+
+        .approach-item {
+            display: flex;
+            align-items: center;
+            padding: 34px 20px;
+            border-bottom: 1px solid $border-color;
+            border-radius: 0px !important;
+            transition: all 0.3s ease;
+            gap: 30px;
+
+            @include media-query(991px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 24px 10px;
+            }
+
+            &:hover {
+                background: rgba($card-bg-color, 0.55);
+                border-color: rgba($theme-primary-color, 0.4);
+
+                .approach-num {
+                    color: $theme-primary-color;
+                    transform: scale(1.08);
+                }
+
+                .approach-step-title {
+                    color: $theme-primary-color;
+                }
+            }
+
+            .approach-num-col {
+                flex: 0 0 70px;
+
+                .approach-num {
+                    font-family: $heading-font;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $body-color;
+                    opacity: 0.8;
+                    display: inline-block;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            .approach-title-col {
+                flex: 0 0 240px;
+
+                @include media-query(991px) {
+                    flex: auto;
+                }
+
+                .approach-step-title {
+                    font-family: $heading-font;
+                    font-size: 28px;
+                    font-weight: 600;
+                    margin: 0;
+                    line-height: 1.2;
+                    letter-spacing: 0.01em;
+                    transition: color 0.3s ease;
+
+                    @include media-query(767px) {
+                        font-size: 23px;
+                    }
+                }
+            }
+
+            .approach-desc-col {
+                flex: 1;
+
+                .approach-desc {
+                    font-family: $base-font;
+                    font-size: 16px;
+                    line-height: 1.7;
+                    color: $body-color;
+                    margin: 0;
+
+                    @include media-query(767px) {
+                        font-size: 14.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==============================================================
+   4. About Experience Section (Image 4)
+   ============================================================== */
+.about-page-experience {
+    padding: 100px 0 120px;
+
+    @include media-query(991px) {
+        padding: 70px 0 90px;
+    }
+
+    .experience-left-header {
+        position: sticky;
+        top: 120px;
+        margin-bottom: 40px;
+
+        @include media-query(991px) {
+            position: static;
+            margin-bottom: 35px;
+        }
+
+        .experience-tag {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+            font-family: $heading-font;
+            color: $theme-primary-color;
+            padding-left: 15px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+            background: $body-bg-color;
+            z-index: 1;
+
+            @include media-query(575px) {
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: -7px;
+                height: 39px;
+                width: 39px;
+                content: "";
+                border: 2px solid $theme-primary-color;
+                border-radius: 0px !important;
+                z-index: -11;
+
+                @include media-query(575px) {
+                    top: -4px;
+                    height: 34px;
+                    width: 34px;
+                }
+            }
+
+            &:after {
+                position: absolute;
+                left: 34px;
+                top: 3px;
+                height: 20px;
+                width: 20px;
+                content: "";
+                background: $body-bg-color;
+                border-radius: 0px !important;
+                z-index: -1;
+
+                @include media-query(575px) {
+                    left: 29px;
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+
+        .experience-main-title {
+            font-family: $heading-font;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+
+            @include media-query(1199px) {
+                font-size: 42px;
+            }
+
+            @include media-query(767px) {
+                font-size: 34px;
+            }
+        }
+    }
+
+    .experience-timeline {
+        border-top: 1px solid $border-color;
+
+        .experience-card {
+            display: flex;
+            padding: 38px 24px;
+            border-bottom: 1px solid $border-color;
+            border-radius: 0px !important;
+            gap: 36px;
+            transition: all 0.3s ease;
+
+            @include media-query(991px) {
+                flex-direction: column;
+                gap: 16px;
+                padding: 26px 12px;
+            }
+
+            &:hover {
+                background: rgba($card-bg-color, 0.55);
+                border-color: rgba($theme-primary-color, 0.4);
+
+                .experience-role {
+                    color: $theme-primary-color;
+                }
+            }
+
+            .experience-role-col {
+                flex: 0 0 280px;
+
+                @include media-query(991px) {
+                    flex: auto;
+                }
+
+                .experience-period {
+                    display: inline-block;
+                    font-family: $heading-font;
+                    font-size: 12.5px;
+                    font-weight: 700;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                    color: $theme-primary-color;
+                    margin-bottom: 8px;
+                }
+
+                .experience-role {
+                    font-family: $heading-font;
+                    font-size: 25px;
+                    font-weight: 600;
+                    line-height: 1.25;
+                    margin: 0 0 6px;
+                    transition: color 0.3s ease;
+
+                    @include media-query(767px) {
+                        font-size: 22px;
+                    }
+                }
+
+                .experience-company {
+                    font-family: $base-font;
+                    font-size: 15.5px;
+                    font-weight: 500;
+                    color: $body-color;
+                    margin: 0;
+                }
+            }
+
+            .experience-desc-col {
+                flex: 1;
+
+                .experience-desc {
+                    font-family: $base-font;
+                    font-size: 16px;
+                    line-height: 1.7;
+                    color: $body-color;
+                    margin: 0;
+
+                    @include media-query(767px) {
+                        font-size: 14.5px;
+                    }
+                }
+            }
+        }
+    }
+}
