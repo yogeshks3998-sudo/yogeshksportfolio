@@ -75,7 +75,7 @@ const Hero = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://wa.me/917676782970" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/917676832079" target="_blank" rel="noopener noreferrer">
                             WhatsApp
                         </a>
                     </li>

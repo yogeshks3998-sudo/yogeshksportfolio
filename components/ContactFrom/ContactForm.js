@@ -185,12 +185,12 @@ const ContactForm = () => {
                         <ul style={{ flexWrap: 'wrap', gap: '12px' }}>
                             <li>
                                 <a
-                                    href="https://wa.me/917676782970"
+                                    href="https://wa.me/917676832079"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ color: 'inherit', textDecoration: 'none' }}
                                 >
-                                    <i className="fa fa-whatsapp"></i> +91 7676782970
+                                    <i className="fa fa-whatsapp"></i> +91 7676832079
                                 </a>
                             </li>
                             <li>

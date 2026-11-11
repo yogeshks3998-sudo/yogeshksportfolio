@@ -33,7 +33,7 @@ const Footer = (props) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="https://wa.me/917676782970"
+                                        href="https://wa.me/917676832079"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="WhatsApp"
